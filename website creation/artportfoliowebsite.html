@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elise Chough Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Gluten:wght@500&display=swap" rel="stylesheet">
+<style>
+
+ header {
+    font-family: 'Gluten', sans-serif;
+    background: white;
+    color: black;
+    padding: 15px; /* Padding around the content */
+    text-align: center; /* Center align the text */
+    font-size: 50px; /* Adjust font size */
+    animation: pulse 8s infinite;
+    margin-bottom: 0;
+    margin-top: 20px;
+    }
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: (255, 255, 255, 0.5);
+}
+
+.header-container header {
+  font-family: 'Gluten', sans-serif;
+  background: white;
+  color: rgb(255, 105, 180);
+  padding: 6px; /* Padding around the content */
+  text-align: center; /* Center align the text */
+  font-size: 50px; /* Adjust font size */
+  animation: pulse 8s infinite;
+}
+
+
+  @keyframes pulse {
+    0% {
+      scale: 1;
+    }
+    50% {
+      scale: 1.2;
+    }
+
+    100% {
+      scale: 1;
+    }
+  }
+
+body {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Add 20px padding on the left and right sides */
+}
+
+.image-grid {
+  column-count: 4; /* Set number of columns */
+  column-gap: 20px; /* Set gap between columns */
+  padding: 20px; /* Add padding around the grid */
+  padding-top: 15px;
+  background-color: white;
+  max-width: 1800px; /* Limit maximum width */
+  margin: 0 auto; /* Center align the grid */
+  }
+
+.image-grid img {
+  width: 100%;
+  display: block;
+  margin-bottom: 20px; /* Add margin between images */
+  }
+
+
+@media (min-width: 768px) {
+  .image-grid {
+    grid-template-columns: repeat(4, 1fr); /* Display 4 images in each row on larger screens */
+  }
+}
+
+.caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-size: 30px;
+    background-color: rgba(255, 193, 246, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center the content vertically */
+}
+
+.enlarged-image {
+    max-width: 90%;
+    max-height: 90%;
+  }
+
+.clickable-image {
+    cursor: pointer;
+    position: relative;
+  }
+
+.image-container:hover .caption {
+    opacity: 1;
+  }
+
+.flex-container {
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  height: 200px; 
+}
+
+.flex-item {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border: 1px solid #ccc;
+}
+
+.image-container {
+  position: relative;
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.gallery-container {
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+</style>
+</head>
+
+<body>
+
+  <div class="header-container">
+    <header>Elise Chough</header>
+  </div>
+  
+  <div class="image-grid">
+    <div class="image-container">
+        <img src="Portfolio/2D Design/Line design.jpg" alt="Image 1" class="clickable-image" data-caption="Overwhelmed">
+        <div class="caption">Overwhelmed</div>
+    </div>
+    <div class="image-container">
+        <img src="Portfolio/2D Design/Rhythm.jpg" alt="Image 2" class="clickable-image" data-caption="This is What Falling in Love Feels Like">
+        <div class="caption">This is What Falling in Love Feels Like</div>
+    </div>
+    <div class="image-container">
+        <img src="Portfolio/2D Design/Shape.jpg" alt="Image 3" class="clickable-image" data-caption="What it Seems">
+        <div class="caption">What it Seems</div>
+    </div>
+    <div class="image-container">
+        <img src="Portfolio/2D Design/Shading.jpg" alt="Image 4" class="clickable-image" data-caption="Afterlife">
+        <div class="caption">Aferlife</div>
+    </div>
+    <div class="image-container">
+        <img src="Portfolio/2D Design/balance.jpg" alt="Image 5" class="clickable-image" data-caption="Breath">
+        <div class="caption">Breath</div>
+    </div>
+    <div class="image-container">
+        <img src="Portfolio/2D Design/Color.jpg" alt="Image 6" class="clickable-image" data-caption="Bedroom">
+        <div class="caption">Bedroom</div>
+    </div>
+    <div class="image-container">
+        <img src="Portfolio/2D Design/Texture.jpg" alt="Image 7" class="clickable-image" data-caption="Fish Out of Water">
+        <div class="caption">Fish Out of Water</div>
+    </div>
+    <div class="image-container">
+        <img src="Portfolio/Electronic Media/window.jpg" alt="Image 8" class="clickable-image" data-caption="Impossible">
+        <div class="caption">Impossible</div>
+    </div>
+    <div class="image-container">
+        <img src="Portfolio/Electronic Media/poster1.jpg" alt="Image 9" class="clickable-image" data-caption="Lost in Space">
+        <div class="caption">Lost in Space</div>
+    </div>
+    <div class="image-container">
+        <img src="Portfolio/Electronic Media/poster2.jpg" alt="Image 10" class="clickable-image" data-caption="Wanted">
+        <div class="caption">Wanted</div>
+    </div>
+    <div class="image-container">
+        <img src="Portfolio/Electronic Media/poster3.jpg" alt="Image 11" class="clickable-image" data-caption="Missing Kitty">
+        <div class="caption">Missing Kitty</div>
+    </div>
+    <div class="image-container">
+        <img src="Portfolio/Graphic Design/Constructivism Poster/red.jpg" alt="Image 12" class="clickable-image" data-caption="Constructivism">
+        <div class="caption">Constructivism</div>
+    </div>
+    <div class="image-container">
+        <img src="Portfolio/Graphic Design/Restaurant mock-up/menu.jpg" alt="Image 13" class="clickable-image" data-caption="Liberty Garden Mock-up Menu">
+        <div class="caption">Liberty Garden Mock-up Menu</div>
+    </div>
+    <div class="image-container">
+        <img src="Portfolio/Printmaking/linocut.jpg" alt="Image 14" class="clickable-image" data-caption="Jeju">
+        <div class="caption">Jeju</div>
+    </div>
+    <div class="image-container">
+        <img src="Portfolio/Printmaking/chloe.jpg" alt="Image 15" class="clickable-image" data-caption="Chloe">
+        <div class="caption">Chloe</div>
+    </div>
+    <div class="image-container">
+        <img src="Portfolio/monotype/bow.pdf" alt="Image 16" class="clickable-image" data-caption="Growing Up">
+        <div class="caption">Growing Up</div>
+    </div>
+    <div class="image-container">
+        <img src="Portfolio/drypoint/dress.pdf" alt="Image 17" class="clickable-image" data-caption="Stage Presence">
+        <div class="caption">Stage Presence</div>
+    </div>
+</div>
+
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const clickableImages = document.querySelectorAll('.clickable-image');
+
+        clickableImages.forEach(image => {
+            image.addEventListener('click', function() {
+                // Create overlay div
+                const overlay = document.createElement('div');
+                overlay.classList.add('overlay');
+
+                // Create enlargedImage and set its properties
+                const enlargedImage = document.createElement('img');
+                enlargedImage.src = this.src;
+                enlargedImage.alt = this.alt;
+
+                // Create caption and set its properties
+                const captionDiv = document.createElement('div');
+                captionDiv.classList.add('caption');
+                captionDiv.textContent = this.dataset.caption;
+
+                // Set styles for overlay and enlargedImage
+                overlay.style.position = 'fixed';
+                overlay.style.top = '0';
+                overlay.style.left = '0';
+                overlay.style.width = '100%';
+                overlay.style.height = '100%';
+                overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.7)';
+                overlay.style.display = 'flex';
+                overlay.style.alignItems = 'center';
+                overlay.style.justifyContent = 'center';
+                enlargedImage.style.maxWidth = '90%';
+                enlargedImage.style.maxHeight = '90%';
+                enlargedImage.style.zIndex = '9999'; // Set higher z-index
+
+                // Append enlargedImage and caption to overlay
+                overlay.appendChild(enlargedImage);
+                overlay.appendChild(captionDiv);
+
+                // Append overlay to body
+                document.body.appendChild(overlay);
+
+                // Animate caption opacity
+                setTimeout(() => {
+                    captionDiv.style.opacity = 1;
+                }, 100); // Delay the animation slightly to ensure it runs after the overlay is appended
+
+                // Add event listener to remove overlay when clicked outside the image
+                overlay.addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        this.remove();
+                    }
+                });
+            });
+        });
+    });
+</script>
+</body>
+</html>
